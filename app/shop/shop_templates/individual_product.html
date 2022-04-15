@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card" style="width: 18rem;">
+    <img src="{{ product.image }}" class="card-img-top" alt="{{ product.product_name }}">
+    <div class="card-body">
+        <h5 class="card-title">{{ product.product_name }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+    </div>
+    <form method="POST" action="{{ url_for('shop.addToCart2') }}">
+        <input class="d-none" type="text" name='product_id' value="{{ product.id }}">
+        <button type='submit' class="btn btn-primary">Add To Cart</button>
+    </form>
+</div>
+
+{% endblock content %}

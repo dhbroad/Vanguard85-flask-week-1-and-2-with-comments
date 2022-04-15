@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset>
+            {{ form.product_name.label }}
+            {{ form.product_name(class='form-control', placeholder='Product Name') }}
+        </fieldset>
+        <fieldset>
+            {{ form.img_url.label }}
+            {{ form.img_url(class='form-control', placeholder='Image URL') }}
+        </fieldset>
+        <fieldset>
+            {{ form.description.label }}
+            {{ form.description(class='form-control', placeholder='Description') }}
+        </fieldset>
+        <fieldset>
+            {{ form.price.label }}
+            {{ form.price(class='form-control', placeholder='Price') }}
+        </fieldset>
+        {{ form.submit(class='btn btn-primary') }}
+
+    </div>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group item">
+                            <a href='{{ url_for("shop.individualProduct", product_id=product.id) }}'>
+                                <img src="{{ product.image }}" class="card-img-top" alt="{{ product.product_name }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ product.product_name }}</h5>
+                                    <p class="card-text">{{ product.price }}</p>
+                                </div>
+                            </a>
+                         </li>
+                        <li class="list-group item">
+                            <a href="{{ url_for('shop.addToCart', product_id=product.id) }}"  class="btn btn-primary">Add To Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

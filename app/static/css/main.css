@@ -1,0 +1,182 @@
+.sign-up-container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "sign-in sign-in"
+      "email email"
+      "email-space email-space"
+      "password-text forgot-password"
+      "password-space password-space"
+      "sign-in-button sign-in-button"
+      "terms-and-services terms-and-services"
+      "stay-signed-in stay-signed-in"
+      "new-to-amazon new-to-amazon"
+      "create-account create-account";
+      border:2px solid rgba(211, 211, 211, 0.589);
+      border-radius:6px;
+      width:330px;
+      height:485px;
+      padding:25px;
+      font-family:Arial,sans-serif;
+      align-items:center;
+      margin-left:auto;
+      margin-right:auto;
+      padding-bottom:30px;
+  }
+  
+  .sign-in { 
+      grid-area: sign-in; 
+      
+    }
+  .sign-in h1{
+      margin-bottom:-5px;
+      margin-top:1px;
+      font-weight:lighter;
+  }
+
+  .email {grid-area: email; margin-bottom:-2px;}
+
+
+ .input-space{
+     height:35px;
+     width:92%;
+     border-radius:5px;
+     border: 1px solid lightgrey;
+     padding-left:3%;
+ }
+ .input-space:focus{
+     outline:none;
+     border-color:coral;
+     box-shadow:0 0 7px darkorange;
+ }
+  
+  .email-space {grid-area: email-space; }
+  
+ 
+  .password-text { grid-area: password-text; margin-bottom:-2px;}
+  
+  .forgot-password { grid-area: forgot-password; margin-bottom:-2px;}
+  .forgot-password a:hover{
+    color:peru;
+    text-decoration:underline;
+}
+    
+ .hyperlink{
+      text-decoration:none;
+      color:rgb(26, 159, 248);
+  }
+
+  .password-space { grid-area: password-space;;
+  }
+  .password-space input{
+      font-size:large;
+  }
+  
+  .sign-in-button { grid-area: sign-in-button; }
+
+  .sign-in-button input{
+      width:97%;
+      height:40px;
+      border-radius:5px;
+      border:2px solid rgba(107, 100, 85, 0.438);
+      background:linear-gradient(0deg,rgba(235, 178, 22, 0.849),rgb(255, 223, 135));
+      margin-top:20px;
+      font-size:large;
+  }
+  .sign-in-button input:hover{
+    background:linear-gradient(0deg,rgba(201, 151, 13, 0.849),rgb(255, 210, 85));
+  }
+  
+  .terms-and-services { grid-area: terms-and-services; margin-bottom:-10px; }
+  .terms-and-services p{
+      font-size:14px;
+  }
+  .terms-and-services a{
+      font-size:14px;
+  }
+  .terms-and-services a:hover{
+    color:peru;
+    text-decoration:underline;
+  }
+  .stay-signed-in { grid-area: stay-signed-in; 
+  }
+  .stay-signed-in p,a{
+      color:black;
+      text-decoration:none;
+      font-size:large;
+    }
+    .stay-signed-in input{
+        accent-color:black;
+        margin-right:5px;
+        background-color:yellow;
+    }
+    .stay-signed-in-checkbox{
+        background-color:black;
+        accent-color:black;
+    }
+
+    .details-tooltip {
+        position: relative;
+        display: inline-block;
+      }
+      
+      /* Tooltip text */
+      .details-tooltip .details-tooltip-text {
+        visibility: hidden;
+        width: 450px;
+        background-color: white;
+        color: black;
+        text-align: left;
+        padding: 20px;
+        border: 1px solid rgba(161, 161, 161, 0.589);
+        border-radius:5px;
+        box-shadow:0 0 7px rgba(211, 211, 211, 0.589);
+        bottom:150%;
+        margin-left:-300px;
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+      }
+      .details-tooltip {
+        margin-left:4px;
+        font-size:large;
+      }
+      
+      .details-tooltip span{
+          font-size:medium;
+      }
+      
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .details-tooltip:hover .details-tooltip-text {
+        visibility: visible;
+      }
+  
+  .new-to-amazon { grid-area: new-to-amazon;
+display:flex;
+width:100%;
+flex-direction:row;
+justify-items:center;
+color:rgb(151, 151, 151);
+margin-bottom:15px;
+  }
+  .new-to-amazon hr{
+      width:23%;
+      height:1px;
+      border:none;
+      background-color:rgb(219, 219, 219);
+  }
+  
+  .create-account { grid-area: create-account; margin-bottom:30px;}
+  .create-account input{
+    width:97%;
+    height:40px;
+    border-radius:6px;
+    border:2px solid rgb(180, 180, 180);
+    background:linear-gradient(rgb(243, 243, 243),rgb(224, 224, 224));
+    font-size:large;
+  }
+  .create-account input:hover{
+    background:linear-gradient(rgb(226, 226, 226),rgb(212, 212, 212));
+  } 

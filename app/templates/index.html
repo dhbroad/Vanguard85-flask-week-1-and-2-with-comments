@@ -1,0 +1,29 @@
+<!-- 
+-
+-
+- SEE NAVBAR.HTML AND BASE.HTML FOR MORE JINJA NOTES
+-
+-
+ -->
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hello World</h1>
+    <ul>
+        <!-- We have access to the variable my_list because we passed it into the render_template() function as an argument to access in this html file -->
+        {% for name in my_list %} <!-- we could have called name anything here, just like in other for loops, but we called it name to be clear about what we're getting back while we go through the loop -->
+            {% if name == "Shoha" %}
+                <li><b>{{ name }}</b></li>
+            {% else %}
+                <li>{{ name }}</li>
+            {% endif %}
+        {% endfor %}
+
+
+    </ul>
+
+
+{% endblock content %}
