@@ -15,9 +15,8 @@ step 7. Create new environmental variables file called .env on the same folder l
 Your .env should look like this:
 FLASK_APP=run.py
 FLASK_ENV=development
-SECRET_KEY=shohaisthegoat
-DATABASE_URL=postgresql:// <-- ADD YOUR DATABASE HOST URL AFTER THE "//"
-
+SECRET_KEY=  <--ADD YOUR SECRETE_KEY AFTER THE "="
+DATABASE_URL=postgresql://  <--ADD YOUR DATABASE HOST URL AFTER THE "//"
 
 Changing the environment to development gives you back helpful errors. Otherwise, you won't be able to tell what went wrong, but when you officially release your application, you change the environment back to "production"
 
