@@ -37,7 +37,7 @@ Whenever someone types anything into the browser, they are doing a GET request
 
 Anytime you make changes to your database, you have to Migrate the changes
 flask db init
-flask db Migrate
+flask db migrate
 flask db upgrade
 
 Linking to Heroku:
